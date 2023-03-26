@@ -1,0 +1,318 @@
+.bucket__container {
+    width: 80vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1rem;
+    /* flex-direction: ; */
+    justify-content: space-between;
+    align-items: start;
+    background-color: rgb(242, 227, 227);
+    margin: 0;
+    padding: 10px 1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.bucket_name_edit{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80vw;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.form_container{
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 80vw;
+        height: 100%;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* color: white; */
+        font-size: 1.3rem;
+        font-weight: 600;
+        cursor: pointer;
+}
+
+.edit_name_modal{
+    width: 30vw;
+    height: 30vh;
+    background-color: white;
+    /* border-radius: 1rem; */
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    box-sizing: border-box;
+    position: relative;
+}
+.form_container form{
+        width: 40vw;
+        height: 40vh;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 1rem 2rem;
+        box-sizing: border-box;
+        position: relative;
+}
+.edit_name_modal label{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+    background-color: rgba(7, 23, 248, 0.963);
+    color: white;
+    margin: 0;
+    
+}
+.edit_name_modal input{
+    width: 80%;
+    padding: 0.4rem 1rem;
+    box-sizing: border-box;
+    /* border: none; */
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+    outline: none;
+}
+
+.form_container form input{
+    width: 80%;
+    padding: 0.4rem 1rem;
+    box-sizing: border-box;
+    margin: 10px 0;
+    /* border: none; */
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+    outline: none;
+}
+
+.edit_name_modal button{
+    
+    padding: 0.4rem 1rem;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: rgba(7, 23, 248, 0.963);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.form_container form button{
+    
+    padding: 0.4rem 1rem;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: rgba(7, 23, 248, 0.963);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+
+.bucket{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.bucket__heading{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    background-color: rgba(1, 22, 43, 0.84);
+    color: white;
+    border-radius: 5px;
+}
+
+.bucket__heading h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.bucket__heading button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.bucket__body{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: start;
+    align-items: start;
+    padding: 1rem 1rem;
+    box-sizing: border-box;
+    
+    
+}
+
+.bucket_card_container{
+    width: 100%;
+    height: 14rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    justify-content: start;
+    align-items: start;
+    padding: 0.2rem;
+    overflow: scroll;
+}
+
+.create_card{
+    
+    position: absolute;
+    bottom: 0.2rem;
+    left: 1rem;
+    
+    justify-content: start;
+    align-items: center;
+    background-color: rgba(14, 211, 229, 0.84);
+    color: white;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.multiple_delete{
+    position: absolute;
+    bottom: 0.2rem;
+    right: 1rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(249, 7, 31, 0.84);
+    color: white;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.createCardElement{
+    position: absolute;
+    bottom: 2rem;
+    right: 15rem;
+    font-size: 2.6rem;
+    color: rgba(14, 211, 229, 0.84);
+    background-color: transparent;
+    border: none;
+}
+
+.edit_card_container{
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 80vw;
+        height: 100%;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* color: white; */
+        font-size: 1.3rem;
+        font-weight: 600;
+        cursor: pointer;
+
+}
+
+.edit_card_container form{
+    width: 40vw;
+        height: 50vh;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 1rem 2rem;
+        box-sizing: border-box;
+        position: relative;
+}
+
+.edit_card_container form h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.edit_card_container form input{
+    width: 80%;
+    padding: 0.4rem 1rem;
+    box-sizing: border-box;
+    margin: 10px 0;
+    /* border: none; */
+    /* border-bottom: 1px solid rgba(0, 0, 0, 0.2); */
+    outline: none;
+}
+
+.edit_card_container form button{
+    
+    padding: 0.4rem 1rem;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: rgba(7, 23, 248, 0.963);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.multi___del{
+    display: flex;
+    
+}
+
+.hidden{
+    display: none;
+}

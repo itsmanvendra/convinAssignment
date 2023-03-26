@@ -1,23 +1,19 @@
-import logo from './logo.svg';
+import { useState } from 'react';
+import Bucket from './component/Bucket';
+import History from './component/History';
 import './App.css';
 
 function App() {
+  const historyitem = [];
+  const [historyItem, setHistoryItem] = useState(historyitem)
+  
+  const historyUpdate = (videoTitle) => {
+    setHistoryItem([videoTitle, ...historyItem]);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+    <Bucket historyUpdate={historyUpdate} />
+    <History historyItem={historyItem} />
     </div>
   );
 }
